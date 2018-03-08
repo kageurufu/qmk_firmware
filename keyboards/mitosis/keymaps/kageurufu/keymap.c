@@ -3,7 +3,6 @@
 enum mitosis_layers
 {
     _xQ, // qwerty
-    _xW, // workman
     _xS, // symbols
     _xN, // numbers
     _xF  // functions
@@ -18,7 +17,10 @@ enum mitosis_layers
 #define KC_RSUP KC_RGUI //
 #define KC_RHYP KC_INT4 // HYPER (actually muhenkan 無変換 and henkan 変換)
 #define KC_LHYP KC_INT5 // or NFER/XFER.
-#define SFT_TAB SFT_T(KC_TAB)
+#define LSFTTAB SFT_T(KC_TAB) // Tap: TAB, Hold: LSHIFT
+#define RSFTTAB SFT_T(KC_TAB) // Tap: TAB, Hold: RSHIFT
+#define LSFTESC SFT_T(KC_ESC) // Tap: ESC, Hold: LSHIFT
+#define RSFTESC SFT_T(KC_ESC) // Tap: ESC, Hold: RSHIFT
 
 // Momentary tri-state layers. Mitosis default keymap does this too but employs
 // new keymappings and a bunch of conditional code. This simpler keymap
@@ -30,15 +32,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P},
     {KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN},
     {KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_QUOT},
-    {XXXXXXX, KC_LSUP, KC_LCTL, MO(_xN), SFT_TAB, KC_RSFT, MO(_xN), KC_RCTL, KC_RSUP, XXXXXXX},
+    {XXXXXXX, KC_LSUP, KC_LCTL, MO(_xN), LSFTTAB, RSFTESC, MO(_xN), KC_RCTL, KC_RSUP, XXXXXXX},
     {XXXXXXX, KC_LHYP, KC_LMTA, MO(_xS), KC_BSPC, KC_SPC,  MO(_xS), KC_RMTA, KC_RHYP, XXXXXXX}
-  },
-  [_xW] = { // Workman
-    {KC_Q,    KC_D,    KC_R,    KC_W,    KC_B,    KC_J,    KC_F,    KC_U,    KC_P,    KC_SCLN},
-    {KC_A,    KC_S,    KC_H,    KC_T,    KC_G,    KC_Y,    KC_N,    KC_E,    KC_O,    KC_I},
-    {KC_Z,    KC_X,    KC_M,    KC_C,    KC_V,    KC_K,    KC_L,    KC_COMM, KC_DOT,  KC_QUOT},
-    {XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX},
-    {XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX}
   },
   [_xS] = { // Symbols
     {KC_ESC,  _______, KC_UP,   _______, _______, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_TILD},
@@ -57,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_xF] = { // Functions
     {KC_ESC,  _______, KC_PGUP, _______, KC_VOLU, KC_F13,  KC_F7,   KC_F8,   KC_F9,   KC_F10},
     {KC_TAB,  KC_HOME, KC_PGDN, KC_END,  KC_VOLD, KC_F14,  KC_F4,   KC_F5,   KC_F6,   KC_F11},
-    {TG(_xW), KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_F15,  KC_F1,   KC_F2,   KC_F3,   KC_F12},
+    {_______, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_F15,  KC_F1,   KC_F2,   KC_F3,   KC_F12},
     {XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX},
     {XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX},
   },
