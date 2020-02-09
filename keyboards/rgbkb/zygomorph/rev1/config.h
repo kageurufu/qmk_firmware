@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x3060
+#define PRODUCT_ID      0x3502
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    RGBKB
 #define PRODUCT         Zygomorph
@@ -56,7 +56,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLED_NUM 60
     #define RGBLED_SPLIT { 30, 30 }
 #endif
-#define DRIVER_LED_TOTAL 30
+
+#define DRIVER_LED_TOTAL 60
 
 #ifdef IOS_DEVICE_ENABLE
   #define RGBLIGHT_LIMIT_VAL 40
