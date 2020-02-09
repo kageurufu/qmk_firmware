@@ -1,7 +1,7 @@
 # RGBKB Sol Rev1 Defaults
 
 # Keycode Options
-BOOTMAGIC_ENABLE        = no        # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE 		= lite      # Virtual DIP switch configuration. Lite is ~42B, Full is ~1000B
 MOUSEKEY_ENABLE         = no        # Mouse keys
 EXTRAKEY_ENABLE         = yes       # Audio control and System control
 UNICODE_ENABLE          = no        # Unicode keycodes

@@ -2,6 +2,10 @@
 
 #include "quantum.h"
 
+#if defined(RGBLIGHT_ENABLE)
+  #include "rgblight.h"
+#endif
+
 // Define layer names and order
 #if defined(KEYBOARD_40percentclub_gherkin) || defined(KEYBOARD_kbdfans_kbd6x)
 enum userspace_layers {

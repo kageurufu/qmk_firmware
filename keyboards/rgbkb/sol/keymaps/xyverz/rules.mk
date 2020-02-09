@@ -2,7 +2,7 @@
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
-BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration. Lite is ~42B, Full is ~1000B
 MOUSEKEY_ENABLE = no        # Mouse keys
 
 EXTRAKEY_ENABLE = yes       # Audio control and System control
