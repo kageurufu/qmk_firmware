@@ -9,7 +9,7 @@ MCU = atmega32a
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
-BOOTLOADER = qmk-dfu
+BOOTLOADER = usbasp
 
 # Custom local font file
 OPT_DEFS += -DOLED_FONT_H=\"common/glcdfont.c\"
