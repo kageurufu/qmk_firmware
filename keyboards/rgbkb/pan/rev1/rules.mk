@@ -4,10 +4,10 @@
 BOOTMAGIC_ENABLE 		= lite      # Virtual DIP switch configuration. Lite is ~42B, Full is ~1000B
 EXTRAKEY_ENABLE         = yes       # Audio control and System control
 
-RGBLIGHT_ENABLE			= yes
+# RGBLIGHT_ENABLE			= yes
 
 # Lighting Options
-# RGB_MATRIX_ENABLE       = WS2812    # Enable per-key coordinate based RGB effects. Do not enable with RGBlight
+RGB_MATRIX_ENABLE       = WS2812    # Enable per-key coordinate based RGB effects. Do not enable with RGBlight
 RGB_MATRIX_KEYPRESSES   = no        # Enable reactive per-key effects.
 RGB_MATRIX_FRAMEBUFFER_EFFECTS = no # Enable frame buffer effects like the typing heatmap.
 
